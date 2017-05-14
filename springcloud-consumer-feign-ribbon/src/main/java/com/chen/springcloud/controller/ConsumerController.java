@@ -26,11 +26,13 @@ public class ConsumerController {
 
     @RequestMapping(value = "/add1", method = RequestMethod.GET)
     public Integer add1() {
+        logger.info("feign call rpcComputeService");
         return rpcComputeService.add(10, 20);
     }
 
     @RequestMapping(value = "/add2", method = RequestMethod.GET)
     public String add2() {
+        logger.info("ribbon call restTemplate");
         return restTemplate.getForEntity("http://COMPUTE-SERVICE/add?a=10&b=20", String.class).getBody();
     }
 
