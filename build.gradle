@@ -1,0 +1,26 @@
+
+subprojects {
+
+    ext {
+        springBootVersion = '1.5.3.RELEASE'
+        springCloudVersion = 'Dalston.RELEASE'
+    }
+
+    buildscript {
+        repositories {
+            mavenCentral()
+        }
+        dependencies {
+            classpath("org.springframework.boot:spring-boot-gradle-plugin:${springBootVersion}")
+        }
+    }
+
+    repositories {
+        mavenLocal()
+        maven { url "https://repo.spring.io/libs-milestone" }
+        mavenCentral()
+    }
+
+
+
+}
