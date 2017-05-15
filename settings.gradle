@@ -2,4 +2,5 @@ rootProject.name = 'springcloud-parent'
 include 'springcloud-eureka-server'
 include 'springcloud-compute-service'
 include 'springcloud-consumer-feign-ribbon'
-
+include 'springcloud-gateway'
+include 'springcloud-query-service'
